@@ -11,9 +11,9 @@ public class Quest {
     public int Index { get; private set; }
     [NonSerialized] public Action<Quest> OnCompleted;
     public bool Completed { get; private set; } = false;
-    QuestingComponent _parttaker;
+    PlayerJournalComponent _parttaker;
 
-    public Quest(QuestSO data, QuestingComponent parttaker, int stepindex = 0) {
+    public Quest(QuestSO data, PlayerJournalComponent parttaker, int stepindex = 0) {
         Index = stepindex;
         SO = data;
         Steps = new();

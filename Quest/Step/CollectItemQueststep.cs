@@ -3,12 +3,12 @@ using UnityEngine;
 public class CollectItemQueststep : Queststep {
     public ItemStack Items;
 
-    public CollectItemQueststep(QueststepSO data, QuestingComponent parttaker, Quest quest) : base(data, parttaker, quest) {
-        Items = ((CollectItemQuestStepData)data).Items;
+    public CollectItemQueststep(QueststepSO data, PlayerJournalComponent parttaker, Quest quest) : base(data, parttaker, quest) {
+        Items = ((CollectItemQuestStepSO)data).Items;
         // parttaker.Behaviour.GetComponent<InventoryBehaviour>().Inventory.Added +=  OnItemCollected;
     }
 
-    private void OnItemCollected(ItemStack stack, ItemStack[] arg2)
+    private void OnItemCollected(ItemStack stack, ItemStack[] inventory)
     {
         Items.Count -= stack.Count;
         if (Items.Count <= 0)

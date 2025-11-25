@@ -3,9 +3,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestingBehaviour : MonoBehaviour
+public class PlayerJournalBehaviour : MonoBehaviour
 {
-    public QuestingComponent Questing { get; set; }
+    public PlayerJournalComponent Questing { get; set; }
     [SerializeField] List<QuestSO> _quests = new();
     [SerializeField] List<QuestSO> _startingQuests = new();
     void Awake()

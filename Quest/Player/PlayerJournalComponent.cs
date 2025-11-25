@@ -4,14 +4,14 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-public class QuestingComponent
+public class PlayerJournalComponent
 {
     public List<Quest> ActiveQuests { get; set; } = new();
     public List<Quest> Completed { get; set; } = new();
     public Action<Queststep> StepCompleted;
     public MonoBehaviour Behaviour;
 
-    public QuestingComponent(MonoBehaviour behaviour, List<QuestSO> startingQuests)
+    public PlayerJournalComponent(MonoBehaviour behaviour, List<QuestSO> startingQuests)
     {
         ActiveQuests = new(startingQuests.Select(x => new Quest(x, this)));
         StepCompleted += OnStepCompleted;
