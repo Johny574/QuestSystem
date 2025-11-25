@@ -1,0 +1,3 @@
+[submodule "ItemStack"]
+	path = ItemStack
+	url = https://github.com/Johny574/ItemStack.git
